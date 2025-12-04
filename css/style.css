@@ -1293,8 +1293,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* OUR VALUES */
 /* ============================================= */
-/* OUR VALUES – 6 CARDS (2×3) + 1 BIG IMAGE       */
-/* Exact match to your design                    */
+/*                */
 /* ============================================= */
 
 .our-values {
@@ -1522,14 +1521,14 @@ h1, h2, h3, h4, h5, h6 {
   .form-row { grid-template-columns:1fr; }
 }
 /* ============================================= */
-/* SERVICES PAGE – EXACT DESIGN MATCH            */
-/* Hero, 2-col, 3x3 grid, CTA, fonts, spacing    */
+/* SERVICES PAGE          */
+/*    */
 /* ============================================= */
 
-/* HERO */
+/*  */
 /* ============================================= */
-/* SERVICES HERO – IMAGE BEHIND TEXT             */
-/* Full-width, parallax, dark overlay, centered  */
+/* SERVICES          */
+/*  */
 /* ============================================= */
 
 .services-hero {
@@ -1683,8 +1682,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================= */
-/* ADDITIONAL SERVICES – TEXT OVER IMAGE         */
-/* No white box – white text, dark overlay       */
+/* ADDITIONAL SERVICES */
 /* ============================================= */
 
 .additional-services {
@@ -1778,8 +1776,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 /* ============================================= */
-/* CONTACT HERO – FINAL REFERENCE MATCH           */
-/* Large wrapped text, subtitle, CTA button       */
+/* CONTACT HERO –      */
 /* ============================================= */
 
 .contact-hero {
@@ -2068,8 +2065,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================= */
-/* TESTIMONIALS – STYLISH & MODERN               */
-/* Clean cards, hover lift, quote icons, avatars */
+/* TESTIMONIALS  */
 /* ============================================= */
 
 .testimonials-stylish {
@@ -2220,8 +2216,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 /* ============================================= */
-/* MENUS PAGE – REFACTORED TO FIT MAIN STYLE     */
-/* Exact match to your screenshots, using vars   */
+/* MENUS PAGE      */
 /* ============================================= */
 
 .menu-hero {
