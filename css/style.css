@@ -2520,3 +2520,64 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
   }
 }
+/* Base styles (mobile-first: starts hidden/collapsed) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.hamburger {
+  display: block; /* Shown on mobile */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: none; /* Hidden by default on mobile */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #333;
+}
+
+.nav ul {
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.nav li {
+  margin: 0.5rem 0;
+}
+
+/* Show nav when hamburger is "active" (use a checkbox for pure CSS toggle) */
+/* Alternative simple version: For full example, check W3Schools link below */
+
+/* Desktop styles: Horizontal nav */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none; /* Hide on desktop */
+  }
+  
+  .nav {
+    display: block; /* Always visible */
+    position: static;
+  }
+  
+  .nav ul {
+    flex-direction: row;
+  }
+  
+  .nav li {
+    margin-left: 1rem;
+  }
+}
