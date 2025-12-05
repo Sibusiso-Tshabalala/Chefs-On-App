@@ -2568,10 +2568,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  .hamburger {
+  transition: transform 0.3s ease;
+}
+#nav-toggle:checked + .hamburger::before {
+  content: '×';  /* Changes ☰ to × */
+  font-size: 2.5rem;
+}
+.logo img { width: 80px; }
   .nav {
     display: none;
   }
   .nav.open {
     display: block;
   }
+}
+.nav a.active {
+  background: rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+#nav-toggle:checked ~ .nav {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
