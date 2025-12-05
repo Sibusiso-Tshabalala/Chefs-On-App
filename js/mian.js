@@ -28,3 +28,7 @@ document.querySelector('.contact-btn').addEventListener('click', function(e) {
   e.preventDefault();
   document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
 });
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('.nav').classList.toggle('open');
+  this.textContent = this.textContent === '☰' ? '×' : '☰'; // Toggle icon
+});
