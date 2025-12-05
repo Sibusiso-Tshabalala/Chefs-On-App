@@ -2520,64 +2520,46 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
   }
 }
-/* Base styles (mobile-first: starts hidden/collapsed) */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-}
-
+/* Hamburger button (hidden on desktop) */
 .hamburger {
-  display: block; /* Shown on mobile */
+  display: none;
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: var(--light);
   cursor: pointer;
 }
 
-.nav {
-  display: none; /* Hidden by default on mobile */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #333;
+/* Mobile nav toggle */
+.nav-input {
+  display: none;
 }
 
-.nav ul {
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
-}
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-.nav li {
-  margin: 0.5rem 0;
-}
-
-/* Show nav when hamburger is "active" (use a checkbox for pure CSS toggle) */
-/* Alternative simple version: For full example, check W3Schools link below */
-
-/* Desktop styles: Horizontal nav */
-@media (min-width: 768px) {
   .hamburger {
-    display: none; /* Hide on desktop */
+    display: block;
   }
-  
+
   .nav {
-    display: block; /* Always visible */
-    position: static;
+    display: none;
+    width: 100%;
   }
-  
+
   .nav ul {
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px 0;
   }
-  
-  .nav li {
-    margin-left: 1rem;
+
+  /* Show nav when checkbox is checked */
+  .nav-input:checked ~ .nav {
+    display: block;
   }
 }
