@@ -2796,3 +2796,20 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 }
+/* Make navigation clearly visible on hero */
+.header.transparent-header .nav a {
+  color: white !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);   /* ← makes text pop */
+  font-weight: 600;
+}
+
+.header.transparent-header .btn-primary {
+  background: var(--red);
+  box-shadow: 0 4px 20px rgba(227,6,19,0.4);
+}
+
+/* Optional: move nav a bit left so it’s not over the black plate
+.header.transparent-header .nav ul {
+  gap: 40px;
+  padding-right: 20px;
+}
