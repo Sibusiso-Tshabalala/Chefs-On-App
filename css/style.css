@@ -2571,6 +2571,23 @@ h1, h2, h3, h4, h5, h6 {
   .hamburger {
   transition: transform 0.3s ease;
 }
+.hamburger {
+    display: block;          /* ← THIS MAKES THE ☰ VISIBLE ON MOBILE */
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--light);
+  }
+
+  /* Optional: Better positioning */
+  .header-inner {
+    position: relative;
+  }
+
+  /* Optional: Make logo smaller on mobile */
+  .logo img {
+    width: 80px;
+  }
+} 
 #nav-toggle:checked + .hamburger::before {
   content: '×';  /* Changes ☰ to × */
   font-size: 2.5rem;
@@ -2582,7 +2599,7 @@ h1, h2, h3, h4, h5, h6 {
   .nav.open {
     display: block;
   }
-}
+
 .nav a.active {
   background: rgba(255,255,255,0.1);
   padding: 8px 16px;
@@ -2591,3 +2608,42 @@ h1, h2, h3, h4, h5, h6 {
 #nav-toggle:checked ~ .nav {
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
+/* FIX: NAV TEXT VISIBLE ON HOME PAGE HERO */
+.hero-index + .header.transparent-header .nav a,
+.hero-index + .header.transparent-header .logo span {
+  color: white !important;
+}
+
+.hero-index + .header.transparent-header .nav a:hover,
+.hero-index + .header.transparent-header .nav a.active {
+  color: var(--red) !important;
+}
+
+/* Optional: Slightly darker overlay on home hero for better contrast */
+.hero-index::before {
+  background: rgba(0,0,0,0.55); /* was 0.4 – increase if needed */
+}
+
+/* HEADER – WHITE TEXT ON DARK HERO PAGES */
+.transparent-header .nav a,
+.transparent-header .logo span {
+  color: white;
+}
+
+.transparent-header .nav a:hover,
+.transparent-header .nav a.active {
+  color: var(--red);
+}
+
+/* ON SCROLL – SWITCH TO DARK TEXT WHEN SOLID BG APPEARS */
+.header.scrolled .nav a,
+.header.scrolled .logo span {
+  color: var(--light);
+}
+
+.header.scrolled .nav a:hover,
+.header.scrolled .nav a.active {
+  color: var(--red);
+}
+
