@@ -28,11 +28,8 @@ document.querySelector('.contact-btn').addEventListener('click', function(e) {
   e.preventDefault();
   document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
 });
-document.querySelector('.hamburger').addEventListener('click', function() {
-  document.querySelector('.nav').classList.toggle('open');
-  this.textContent = this.textContent === '☰' ? '×' : '☰'; // Toggle icon
-});
-// MOBILE MENU TOGGLE
+
+// MOBILE MENU TOGGLE (keep only this)
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const mobileNav = document.querySelector('.mobile-nav');
